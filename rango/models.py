@@ -6,7 +6,7 @@ from django.db import models
 class Category(models.Model):
     name = models.CharField(max_length=128, unique=True)
 
-    def _str_(self): #For Python 2, use _unicode_ too
+    def __str__(self): #For Python 2, use _unicode_ too
         return self.name
 
 class Page(models.Model):
