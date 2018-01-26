@@ -5,8 +5,10 @@ from django.db import models
 
 class Category(models.Model):
     name = models.CharField(max_length=128, unique=True)
+    views = models.IntegerField(default=0)
+    likes = models.IntegerField(default=0)
 
-    def __str__(self): #For Python 2, use _unicode_ too
+    def __unicode__(self): #For Python 2, use _unicode_ too
         return self.name
 
 class Page(models.Model):
@@ -15,5 +17,5 @@ class Page(models.Model):
     url = models.URLField()
     views = models.IntegerField(default=0)
 
-    def _str_(self): #For Python 2, use _unicode_ too
-        return self.name
+    def __unicode__(self): #For Python 2, use _unicode_ too
+        return self.title
