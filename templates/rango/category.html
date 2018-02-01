@@ -5,7 +5,7 @@
 </head>
 	<div>
 	{% if category %}
-		<h1> {{ category.name } } </h1>
+		<h1> {{ category.name }} </h1>
 		{% if pages %}
 			<ul>
 			{% for page in pages %}
@@ -20,6 +20,8 @@
 	{% endif %}
 	</div>
 <a href="/index/">Back home</a><br/>
+<a href="/rango/category/{{category.slug}}/add_page/">Add Page</a> <br/>
+
 </body>
 </html>
 

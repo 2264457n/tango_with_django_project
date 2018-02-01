@@ -43,7 +43,7 @@ def populate():
             'Django': {'pages': django_pages, 'views': 64, 'likes': 32},
             'Other Frameworks': {'pages': other_pages, 'views': 32, 'likes': 16}, }
 
-    for cat, cat_data in cats.iteritems():
+    for cat, cat_data in cats.items():
         #c = add_cat(cat) old population script part, added new one to cater for new attributes
         c = add_cat(cat,cat_data["views"], cat_data["likes"])
         for p in cat_data['pages']:
