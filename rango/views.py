@@ -95,10 +95,10 @@ def add_category(request):
             #We could give a confirmation message
             #But since the most recent category added is on the index page
             #Then we can direct theuser back to the index page
-    else:
-        #The supplied form contained errors-
-        # just print them to the terminal
-        print(form.errors)
+        else:
+            #The supplied form contained errors-
+            # just print them to the terminal
+            print(form.errors)
 
     #Will handle the bad form, new for or no form supplied cases
     #Render the form with error messages (if any)

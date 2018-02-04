@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 {% extends 'rango/base.html' %}
 {% load staticfiles %}
 {% block title_block %}
@@ -5,9 +6,10 @@
 {% endblock %}
 
 {% block body_block %}
-
-<h1>Most Liked Categories</h1>
 <div>
+<h1>Most Liked Categories</h1>
+</div>
+
 {% if categories %}
 <ul>
 {% for category in categories %}
@@ -22,10 +24,11 @@
 </div>
 <div>
 <h1> Most Viewed Pages </h1>
+</div>
 		{% if pages %}
 			<ul>
 			{% for page in pages %}
-			<li><a href="{{ page.url }}">{{ page.title }}</a></li>
+			<li><a href='{{ page.url }}'>{{ page.title }}</a></li>
 			{% endfor %}
 			</ul>
 		{% else %}
@@ -35,9 +38,9 @@
 	
 </div>
 	<div>
-	<img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
+		<img src='{% static 'images/rango.jpg' %}' alt="Picture of Rango" />
 	</div>	
-	<br />
+	
 {% endblock %}
 
 
