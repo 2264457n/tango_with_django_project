@@ -7,13 +7,17 @@
 
 {% block body_block %}
 <div>
+<h1> Rango says.. </h1>
 <h1>Most Liked Categories</h1>
-</div>
+
 {% if user.is_authenticated %}
 	howdy {{ user.username }}!
 {% else %}
 	hey there partner!
 {% endif %}
+
+</div>
+<div>
 {% if categories %}
 <ul>
 {% for category in categories %}
@@ -42,7 +46,7 @@
 	
 </div>
 	<div>
-		<img src='{% static 'images/rango.jpg' %}' alt="Picture of Rango" />
+		<img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango" />
 	</div>	
 	
 {% endblock %}

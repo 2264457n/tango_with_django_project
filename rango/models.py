@@ -18,7 +18,7 @@ class Category(models.Model):
         super(Category, self).save(*args, **kwargs)
         
     class Meta:
-        verbose_name_plural = 'categories'
+        verbose_name_plural = 'Categories'
 
     def __unicode__(self): #For Python 2, use _unicode_ too
         return self.name
@@ -48,3 +48,5 @@ class UserProfile(models.Model):
 
     def __unicode__(self):
         return self.user.username
+
+    
