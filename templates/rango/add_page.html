@@ -8,7 +8,10 @@
 
 {% block body_block %}
 		<div>
+		
+	
 		{% if category %}
+		{% if user.is_authenticated %}
 		
 			<form id="page_form" method="post" action='/rango/category/{{ category.slug }}/add_page/'>
 			{% csrf_token %}
@@ -24,8 +27,13 @@
 			</form>
 		
 		{% else %}
-			A category by this name does not exist.
+			You need to be logged in to add a page.
 		{% endif %}
+
+	{% else %}
+		The specified category does not exist!
+	{% endif %}
+
 		
 		</div>
 	</body>
