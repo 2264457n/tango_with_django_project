@@ -1,7 +1,7 @@
 {% extends 'rango/base.html' %}
 {% load staticfiles %}
 {% block title_block %}
-	{{ category.name }}
+	About
 {% endblock %}
 
 {% block body_block %}
@@ -9,15 +9,17 @@
 		
 		<div>
 			<h1>Rango is about ...</h1>
+			Rango says here is the about page.
 		
 			This tutorial has been put together by Kara Newlands. <br />
 		</div>
 		
 		<div>
-			<p> You have visited... {{ visit_count }} times </p>
+			<p> Visits: {{ visits }} times </p>
 		
 	
-			<img src="{{MEDIA_URL}}cat.jpg" height="400px" width="1000px" +alt="Picture of a cat" /> <!-- New line -->
+			<img src="{{MEDIA_URL}}cat.jpg" height="400px" width="400px" +alt="Picture of a cat" /> 
+			<img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango" height="400px" width="600px" /><!-- New line -->
 		</div>
 {% endblock %}
 
